@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     sudo
 
 # Create a new user with sudo privileges
-RUN useradd -m -s /bin/bash de && echo 'de:hirwa@12345' | chpasswd && usermod -aG sudo de
+RUN useradd -m -s /bin/bash de && echo 'de:here is for password' | chpasswd && usermod -aG sudo de
 
 # Set up SSH
 RUN mkdir /var/run/sshd
