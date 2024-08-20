@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ssh:
+    build: .
+    volumes:
+      - de_home:/home/de
+    ports:
+      - "2222:22"  # Map container port 22 to host port 2222
+
+volumes:
+  de_home:
