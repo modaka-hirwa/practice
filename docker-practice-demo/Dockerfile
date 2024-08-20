@@ -23,4 +23,9 @@ RUN echo 'PubkeyAuthentication yes' >> /etc/ssh/sshd_config
 EXPOSE 22
 
 # Start the SSH service
+
+RUN apt-get update && apt-get install -y openssh-server && \
+    ssh-keygen -A
+
 CMD ["/usr/sbin/sshd", "-D"]
+
